@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Website</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+            <a href="services.html">Services</a>
+        </nav>
+    </header>
+    <main>
+        <section class="hero">
+            <h1>Welcome to MunsterHemp</h1>
+            <h2 id="greeting"></h2>
+            <p>Discover sustainable hemp solutions for a greener future.</p>
+            <a href="about.html" class="button">Learn More</a>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 MunsterHemp</p>
+        <div class="social">
+            <a href="https://facebook.com" target="_blank">Facebook</a>
+            <a href="https://twitter.com" target="_blank">Twitter</a>
+            <a href="https://instagram.com" target="_blank">Instagram</a>
+        </div>
+    </footer>
+    <script>
+        const now = new Date();
+        const hours = now.getHours();
+        let greeting;
+
+        if (hours < 12) {
+            greeting = "Good Morning!";
+        } else if (hours < 18) {
+            greeting = "Good Afternoon!";
+        } else {
+            greeting = "Good Evening!";
+        }
+
+        document.addEventListener("DOMContentLoaded", () => {
+            document.getElementById("greeting").innerText = greeting;
+        });
+    </script>
+</body>
+</html>
